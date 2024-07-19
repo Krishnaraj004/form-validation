@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <form action="./success.html" name="valid" onsubmit="return validation()" >
+        <h1>Register</h1>
+        <label for="fname">Firstname</label>
+        <input type="text" name="fname">
+        <label for="lname">Lastname</label>
+        <input type="text" name="lname">
+        <label for="city">City</label>
+        <input type="text" name="city">
+        <label for="phnum">Phone number</label>
+        <input type="number" name="phnum">
+        <label for="address">Address</label>
+        <textarea name="address" id=""></textarea>
+        <button type="submit" value="submit"><b>submit</b></button>
+    </form>
+    <script>    
+        function validation(){
+            var fname=document.valid.fname.value;
+            var lname=document.valid.lname.value;
+            var city=document.valid.city.value;
+            var phnum=document.valid.phnum.value;
+            var add=document.valid.address.value;
+            if(fname!="" && lname!="" && city!="" && phnum!="" && add!=""){
+                return true;
+            }
+            else{
+                alert("Enter the form details");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
